@@ -1,9 +1,10 @@
+####carefully enter input variables in lines 7, 11, 12,15, 16,17,18 and 19
 rm(list=ls())
 library(plotly)
 library(zoo)
 
 ####path to file location
-filepath <- "C:/Users/admin/Shafer Lab Dropbox/Archives/Tritkinetics Archives/20200406BackUp/Data Archive 2014-2019/DAM Data (Old Comp B)/Behavior Data Backup (1-6-2020)/"
+filepath <- "path to file location (not to the file itself)"
 
 ####enter start and end dates in the following two####
 ####lines in the same format as this eg: 20 Apr 20####
@@ -11,12 +12,15 @@ start.date <- as.Date('6 Aug 18', format = '%d %b %y')
 end.date <- as.Date('23 Aug 18', format = '%d %b %y')
 
 ####enter the input variables####
-setwd("D:/OneDrive/Documents/AL_ASRC/Lab/Alyssa_Deepika/CompB/Run1/")
-monitor <- "Monitor20"
+setwd("path where plots need to be saved") #enter path of destination output folder
+monitor <- "Monitor20" #enter name of monitor file
 modulo_tau <- 24
-current.bin = 1
-desired.bin = 30
+current.bin = 1 #this is the value of bins in which recording was done
+desired.bin = 30 #this is the value of bins in which you would like to plot the actograms
 
+
+#################################################
+#################################################
 nplot = 2
 days <- as.numeric(end.date - start.date)
 s_per_day <- (60/desired.bin)*modulo_tau
