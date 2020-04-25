@@ -1,4 +1,4 @@
-####carefully enter input variables in lines 7, 11, 12,15, 16,17,18 and 19
+####carefully enter input variables in lines 7,11,12, and 15-19
 rm(list=ls())
 library(plotly)
 library(zoo)
