@@ -1,26 +1,26 @@
+####carefully enter input variables in lines 7,11,12, and 15-23
 rm(list=ls())
 library(plotly)
 library(zoo)
 
 ####path to file location
-filepath <- "D:/OneDrive/Documents/AL_PhD/Thesis/6_light_entrainment/Experiment/locomotor/PCELoc_raw/1212AllM/"
+filepath <- "path to file location (not to the file itself)"
 
 ####enter start and end dates in the following two####
 ####lines in the same format as this eg: 20 Apr 20####
-start.date <- as.Date('11 Dec 14', format = '%d %b %y')
-end.date <- as.Date('5 Jan 15', format = '%d %b %y')
+start.date <- as.Date('6 Aug 18', format = '%d %b %y')
+end.date <- as.Date('23 Aug 18', format = '%d %b %y')
 
 ####enter the input variables####
-setwd("D:/OneDrive/Desktop/")
-monitor <- "1212AllMM029"
+setwd("path where plots need to be saved") #enter path of destination output folder
+monitor <- "Monitor20" #enter name of monitor file
 modulo_tau <- 24
-current.bin = 15
-desired.bin = 30
-
-entr.start <- as.Date('21 Dec 14', format = '%d %b %y')
-entr.end <- as.Date('30 Dec 14', format = '%d %b %y')
-zeit.start <- 10
-dur.zeit <- 12
+current.bin = 1 #this is the value of bins in which recording was done
+desired.bin = 30 #this is the value of bins in which you would like to plot the actograms
+entr.start <- as.Date('21 Dec 14', format = '%d %b %y') #start date of entrainment protocol
+entr.end <- as.Date('30 Dec 14', format = '%d %b %y') #end date of entrainment protocol
+zeit.start <- 10 #hours after 12am that zeitgeber turns ON
+dur.zeit <- 12 #zeitgeber duration in hours; In LD 12:12, this will be 12
 
   
 nplot = 2
